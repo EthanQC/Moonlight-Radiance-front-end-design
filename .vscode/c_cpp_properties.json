@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "WSL",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/usr/include/c++/13",      // 这里指定你在WSL的路径
+        "/usr/include/c++/13/backward",
+        "/usr/local/include",
+        "/usr/include"
+      ],
+      "compilerPath": "/usr/bin/g++", // 使用WSL中安装的g++
+      "cStandard": "c11",
+      "cppStandard": "c++23",
+      "intelliSenseMode": "linux-gcc-x64",
+      "compilerArgs": []
+    }
+  ],
+  "version": 4
+}
