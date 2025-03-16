@@ -78,7 +78,7 @@
     * 牌的归属：打出一张牌满足上面任意一种机制时，所有组成这种机制的牌均归这张牌的打出者
         * 牌的归属会随月相牌或功能牌的打出而实时改变
         * 地图放满基础牌时，每有一张基础牌归属于你，你额外获得1点月光
-* [地图设计](https://github.com/EthanQC/Moonlight-Radiance-front-end-design/blob/99f56876204bfa610bb44306e74cb4637a67a96b/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%9C%B0%E5%9B%BE%E8%AE%BE%E8%AE%A1.md)
+* [地图设计](https://github.com/EthanQC/Moonlight-Radiance-front-end-design/blob/e00c68d8a637865c63f60fd50db898a92f92d9bf/%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/%E5%9C%B0%E5%9B%BE%E8%AE%BE%E8%AE%A1.md)
     * 分为两张地图，一张为对战地图，一张为竞速地图
     * 对战地图会根据pvp和pve中玩法的不同产生相应的改变
     * 竞速地图为pvp专属，记录玩家对抗进度
