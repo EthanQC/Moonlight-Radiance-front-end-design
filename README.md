@@ -9,39 +9,53 @@
 
 ## 项目结构
 
-    moonlight-radiance-web/
-    ├── public/                # 静态资源
-    ├── src/
-    │   ├── assets/           # 图片、音效等资源
-    │   │   ├── images/
-    │   │   ├── sounds/
-    │   │   └── styles/
-    │   ├── components/       # 可复用组件
-    │   │   ├── common/      # 通用组件
-    │   │   ├── game/        # 游戏相关组件
-    │   │   │   ├── Board/   # 游戏棋盘
-    │   │   │   ├── Card/    # 卡牌相关
-    │   │   │   └── Player/  # 玩家相关
-    │   │   └── layout/      # 布局组件
-    │   ├── features/        # Redux特性
-    │   │   ├── auth/        # 用户认证
-    │   │   ├── game/        # 游戏状态
-    │   │   └── store.ts     # Redux配置
-    │   ├── hooks/           # 自定义Hooks
-    │   ├── pages/           # 页面组件
-    │   │   ├── auth/       
-    │   │   ├── game/
-    │   │   └── home/
-    │   ├── services/        # API服务
-    │   ├── types/           # 类型定义
-    │   └── utils/           # 工具函数
+    Moonlight-Radiance-front-end-design/
+    ├── docs/                           # 项目文档
+    │   ├── api/                        # API文档
+    │   ├── design/                     # 设计文档
+    │   └── development/                # 开发文档
+    ├── moonlight-radiance-web/         # 前端项目(React)
+    │   ├── public/                     # 静态资源
+    │   ├── src/
+    │   │   ├── assets/                 # 资源文件
+    │   │   │   ├── images/             # 图片资源
+    │   │   │   ├── sounds/             # 音效资源
+    │   │   │   └── styles/             # 样式文件
+    │   │   ├── components/             # 组件
+    │   │   │   ├── common/             # 通用组件
+    │   │   │   │   ├── Button/
+    │   │   │   │   └── Modal/
+    │   │   │   └── game/               # 游戏组件
+    │   │   │       ├── Board/          # 棋盘
+    │   │   │       ├── Card/           # 卡牌
+    │   │   │       └── Player/         # 玩家
+    │   │   ├── features/               # Redux功能模块
+    │   │   │   ├── auth/               # 认证状态
+    │   │   │   └── game/               # 游戏状态
+    │   │   ├── hooks/                  # 自定义Hooks
+    │   │   │   ├── useAuth.ts
+    │   │   │   ├── useGame.ts
+    │   │   │   └── useWebSocket.ts
+    │   │   ├── pages/                  # 页面
+    │   │   │   ├── auth/
+    │   │   │   ├── game/
+    │   │   │   └── home/
+    │   │   ├── services/               # API服务
+    │   │   │   ├── api/
+    │   │   │   └── websocket/
+    │   │   ├── types/                  # 类型定义
+    │   │   └── utils/                  # 工具函数
+    │   └── tests/                      # 测试文件
+    └── resources/                      # 共享资源
+        ├── images/               
+        └── designs/              
 
 ## 创建项目
 
     npm create vite@latest moonlight-radiance-web -- --template react-ts
 
     cd moonlight-radiance-web
-
+moonlight-radiance-web
 ## 安装核心依赖
 
     npm install @reduxjs/toolkit react-redux @tanstack/react-query antd @ant-design/icons
