@@ -58,6 +58,12 @@
 moonlight-radiance-web
 ## 安装核心依赖
 
+    sudo apt update
+    sudo apt install nodejs npm
+
+    node -v
+    npm -v
+
     npm install @reduxjs/toolkit react-redux @tanstack/react-query antd @ant-design/icons
     npm install konva react-konva socket.io-client
     npm install tailwindcss postcss autoprefixer
