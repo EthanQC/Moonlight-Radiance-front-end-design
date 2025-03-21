@@ -7,6 +7,51 @@
 
 本仓库是《月华》的前端开发与需求文档编写仓库，旨在记录我的独立开发过程
 
+## 项目结构
+
+    moonlight-radiance-web/
+    ├── public/                # 静态资源
+    ├── src/
+    │   ├── assets/           # 图片、音效等资源
+    │   │   ├── images/
+    │   │   ├── sounds/
+    │   │   └── styles/
+    │   ├── components/       # 可复用组件
+    │   │   ├── common/      # 通用组件
+    │   │   ├── game/        # 游戏相关组件
+    │   │   │   ├── Board/   # 游戏棋盘
+    │   │   │   ├── Card/    # 卡牌相关
+    │   │   │   └── Player/  # 玩家相关
+    │   │   └── layout/      # 布局组件
+    │   ├── features/        # Redux特性
+    │   │   ├── auth/        # 用户认证
+    │   │   ├── game/        # 游戏状态
+    │   │   └── store.ts     # Redux配置
+    │   ├── hooks/           # 自定义Hooks
+    │   ├── pages/           # 页面组件
+    │   │   ├── auth/       
+    │   │   ├── game/
+    │   │   └── home/
+    │   ├── services/        # API服务
+    │   ├── types/           # 类型定义
+    │   └── utils/           # 工具函数
+
+## 创建项目
+
+    npm create vite@latest moonlight-radiance-web -- --template react-ts
+
+    cd moonlight-radiance-web
+
+## 安装核心依赖
+
+    npm install @reduxjs/toolkit react-redux @tanstack/react-query antd @ant-design/icons
+    npm install konva react-konva socket.io-client
+    npm install tailwindcss postcss autoprefixer
+    npm install react-router-dom axios
+
+    // 初始化 TailwindCSS
+    npx tailwindcss init -p
+
 ## 总览
 目前游戏分为两版，联机版和单机版
 
