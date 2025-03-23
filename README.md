@@ -67,10 +67,7 @@
     npm install @reduxjs/toolkit react-redux @tanstack/react-query antd @ant-design/icons
     npm install konva react-konva socket.io-client
     npm install tailwindcss postcss autoprefixer
-    npm install react-router-dom axios
-
-    // 初始化 TailwindCSS
-    npx tailwindcss init -p
+    npm install react-router-dom axios    
 
 ## 总览
 目前游戏分为两版，联机版和单机版
