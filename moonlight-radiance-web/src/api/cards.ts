@@ -15,7 +15,7 @@ export const cardApi = {
 
   // 获取卡牌状态
   getCardState: async (gameId: number) => {
-    const response = await axios.get<CardState>(`${BASE_URL}/state`, {
+    const response = await axios.post<CardState>(`${BASE_URL}/state`, {
       params: { game_id: gameId }
     });
     return response.data;
