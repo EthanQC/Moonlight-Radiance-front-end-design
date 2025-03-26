@@ -1,13 +1,12 @@
-// api/card.ts
-import axios from 'axios';
 import { CardState } from '../types/cards';
+import instance from '../utils/AddAuthToRoute';
 
-const BASE_URL = 'http://localhost:8080/api/card';
+const BASE_URL = '/cards';
 
 export const cardApi = {
   // 初始化牌组
   initializeDeck: async (gameId: number) => {
-    const response = await axios.post(`${BASE_URL}/init`, {
+    const response = await instance.post(`${BASE_URL}/init`, {
       game_id: gameId
     });
     return response.data;
@@ -15,15 +14,15 @@ export const cardApi = {
 
   // 获取卡牌状态
   getCardState: async (gameId: number) => {
-    const response = await axios.post<CardState>(`${BASE_URL}/state`, {
-      params: { game_id: gameId }
+    const response = await instance.post<CardState>(`${BASE_URL}/state`, {
+      game_id: gameId
     });
     return response.data;
   },
 
   // 抽初始手牌
   drawInitialCards: async (gameId: number) => {
-    const response = await axios.post(`${BASE_URL}/draw`, {
+    const response = await instance.post(`${BASE_URL}/draw`, {
       game_id: gameId
     });
     return response.data;
@@ -31,7 +30,7 @@ export const cardApi = {
 
   // 打出一张牌
   playCard: async (gameId: number, cardId: number) => {
-    const response = await axios.post(`${BASE_URL}/play`, {
+    const response = await instance.post(`${BASE_URL}/play`, {
       game_id: gameId,
       card_id: cardId
     });
@@ -40,7 +39,7 @@ export const cardApi = {
 
   // 结束回合
   endTurn: async (gameId: number) => {
-    const response = await axios.post(`${BASE_URL}/endTurn`, {
+    const response = await instance.post(`${BASE_URL}/endTurn`, {
       game_id: gameId
     });
     return response.data;

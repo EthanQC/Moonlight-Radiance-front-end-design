@@ -10,11 +10,20 @@ export const Card: React.FC<CardProps> = ({ card, onClick }) => {
     return (
       <div 
         className="card" 
+        style={{
+          border: '1px solid #999',
+          padding: '1rem',
+          margin: '0.5rem',
+          display: 'inline-block',
+          cursor: 'pointer',
+          width: '120px'
+        }}
         onClick={onClick}
       >
         <h3>{card.name}</h3>
         <p>{card.description}</p>
         <div className="card-cost">{card.cost}</div>
+        <p style={{ fontSize: '0.9em' }}>{card.description}</p>
       </div>
     );
 };
