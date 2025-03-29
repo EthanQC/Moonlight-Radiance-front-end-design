@@ -1,5 +1,5 @@
 // App.tsx
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import GamePage from './pages/game/GamePage'
 import HomePage from './pages/HomePage'
 import RegisterPage from './pages/users/RegisterPage'

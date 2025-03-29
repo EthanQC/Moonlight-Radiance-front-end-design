@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { cardApi } from '../../api/cards';
 import { CardList } from '../../components/game/Card/cards';
 import { Card, CardState } from '../../types/cards';
 
 export const GamePage: React.FC = () => {
-  const [gameId] = useState<number>(1); // 实际应该从路由或props获取，这里写死1做示例
+  // 从路由参数获取gameId，如果没有则生成一个新的
+  const { gameId: routeGameId } = useParams<{ gameId: string }>();
+  const [gameId] = useState<number>(() => {
+    if (routeGameId) {
+      return parseInt(routeGameId, 10);
+    }
+    // 如果没有gameId，生成一个临时的
+    return Math.floor(Math.random() * 1000000);
+  });
   const [cardState, setCardState] = useState<CardState | null>(null);
   const [error, setError] = useState<string>('')
 
