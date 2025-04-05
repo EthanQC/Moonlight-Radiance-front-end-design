@@ -1,17 +1,19 @@
-// App.tsx
 import { Routes, Route } from 'react-router-dom'
 import GamePage from './pages/game/GamePage'
 import HomePage from './pages/HomePage'
 import RegisterPage from './pages/users/RegisterPage'
 import LoginPage from './pages/users/LoginPage'
 import ProtectedRoute from './components/game/User/ProtectedRoute'
-// import './App.css'
 
 function App() {
   return (
     <div>
       <Routes>
+        
+        {/* 首页 */}
         <Route path="/" element={<HomePage />} />
+
+        {/* 登录/注册 */}
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
 
